@@ -2,4 +2,4 @@
 
 Enkelt REST-gränssnitt för koordinattransformation mellan vanliga svenska referenssystem.
 
-![Byggstatus](https://travis-ci.org/konnik/minkoordinat.svg "Byggstatus")
+[![Build Status](https://travis-ci.org/konnik/minkoordinat.svg?branch=master)](https://travis-ci.org/konnik/minkoordinat)
