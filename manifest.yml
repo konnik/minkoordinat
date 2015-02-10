@@ -1,0 +1,5 @@
+---
+applications:
+- name: minkoordinat
+  memory: 128M
+  instances: 1

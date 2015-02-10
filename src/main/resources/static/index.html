@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>api.minkoordinat.se - transformera koordinater sweref99tm, </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Vill du transformera koordinater?</h1>
+Vad kul, då kan du ju använda vårt lilla api som ger dig möjlighet att
+transformera mellan koordinatsystemen WGS 84, SWEREF 99 TM och RT 90.
+<p>
+Så här ser vårt enkla REST-api ut:
+<pre>
+http://api.minkoordinat.se/api/v1/transformera/{koorindatsystem}/{northing}/{easting}	
+</pre>
+</p>
+
+Tillåtna värden för {koordinatsystem} är:
+<ul>
+	<li>wgs84</li>
+	<li>sweref99tm</li>
+	<li>rt90</li>
+</ul>
+
+Koordinaterna anges med {northing} och {easting} och ska vara decimaltal med punkt som decimalavskiljare.
+
+Exempel:
+<pre>
+http://api.minkoordinat.se/api/v1/transformera/wgs84/60.67488/17.14127
+</pre>
+
+Detta ger svaret:
+<pre>
+{
+"sweref99tm":{
+   "northing":6728481.009694073,
+   "easting":616980.0031438438
+ },
+"rt90":{
+   "northing":6729377.7996849585,
+   "easting":1573031.0827265498,
+   "x":6729377.7996849585,
+   "y":1573031.0827265498
+ },
+"wgs84":{
+   "lat":60.67488,
+   "long":17.14127
+ }
+}
+</pre>
+
+Kör hårt och var snäll... :-)
+
+</body>
+</html>
